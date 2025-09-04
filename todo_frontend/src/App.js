@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CalendarDualMode from './components/CalendarDualMode';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -42,7 +43,9 @@ function App() {
           Learn React
         </a>
       </header>
-      {/* CalendarDualMode has been removed from default render */}
+
+      {/* Render the converted calendar UI */}
+      <CalendarDualMode initialMonth="April" initialYear={2021} />
     </div>
   );
 }
