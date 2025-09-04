@@ -1,0 +1,336 @@
+:root {
+  --color-adafb3: #adafb3;
+  --color-1d1d1f: #1d1d1f;
+  --color-ffffff: #ffffff;
+  --color-262629: #262629;
+  --color-ebebeb: #ebebeb;
+  --color-000000: #000000;
+  --color-f5f5f5: #f5f5f5;
+  --color-0047ff: #0047ff;
+  --color-e5e5e5: #e5e5e5;
+  --color-141414: #141414;
+  --color-1f1f1f: #1f1f1f;
+  --color-001754: #001754;
+  --color-e6e6e6: #e6e6e6;
+  --color-d8e3ff: #d8e3ff;
+  --color-ff00f5: #ff00f5;
+  --color-171717: #171717;
+  --color-176af6: #176af6;
+  --color-7b61ff: #7b61ff;
+  --color-2c2c2e: #2c2c2e;
+  --color-e5e5ea: #e5e5ea;
+  --color-cccccc: #cccccc;
+  --color-ff0000: #ff0000;
+  --color-e4e4e4: #e4e4e4;
+  --color-7939ff: #7939ff;
+
+  --font-family-lexend: 'Lexend', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  --font-family-poppins: 'Poppins', var(--font-family-lexend);
+
+  --typo-17-size: 24px; --typo-17-weight: 700; --typo-17-line: 24px; --typo-17-letter: -0.24px; --typo-17-color: var(--color-f5f5f5);
+  --typo-18-size: 18px; --typo-18-weight: 500; --typo-18-line: 18px; --typo-18-letter: 0px;    --typo-18-color: var(--color-ffffff);
+  --typo-19-size: 18px; --typo-19-weight: 500; --typo-19-line: 18px; --typo-19-letter: 0px;    --typo-19-color: var(--color-ebebeb);
+  --typo-20-size: 24px; --typo-20-weight: 700; --typo-20-line: 24px; --typo-20-letter: -0.24px; --typo-20-color: var(--color-141414);
+  --typo-21-size: 18px; --typo-21-weight: 500; --typo-21-line: 18px; --typo-21-letter: 0px;    --typo-21-color: var(--color-1f1f1f);
+  --typo-22-size: 18px; --typo-22-weight: 500; --typo-22-line: 18px; --typo-22-letter: 0px;    --typo-22-color: var(--color-001754);
+
+  --space-0: 0px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-24: 24px;
+  --space-44: 44px;
+  --space-50: 50px;
+  --space-54: 54px;
+  --space-69: 69px;
+  --space-378: 378px;
+  --space-396: 396px;
+  --space-426: 426px;
+
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-80: 80px;
+
+  --shadow-0: 0 1px 2px 0 rgba(0,14,51,1);
+  --shadow-1: 0 1px 1px 0 rgba(0,14,51,1);
+  --shadow-blue-1: 0 3px 2px 0 #0047ff, 0 1.5px 1px 0 #001f70;
+}
+
+.screenRegular {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  padding: var(--space-24);
+  border-radius: var(--radius-24);
+  background: var(--color-adafb3);
+  display: flex;
+  gap: var(--space-24);
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapperTwoCards {
+  display: flex;
+  gap: 24px;
+}
+
+.calendarCard {
+  width: 426px;
+  height: 396px;
+  border-radius: var(--radius-16);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-24);
+}
+
+.calendarLight {
+  background: var(--color-f5f5f5);
+  box-shadow: var(--shadow-0);
+}
+.calendarDark {
+  background: var(--color-1d1d1f);
+  box-shadow: var(--shadow-0);
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  height: var(--space-44);
+  gap: var(--space-8);
+  justify-content: space-between;
+}
+
+.headerBtn {
+  width: var(--space-44);
+  height: var(--space-44);
+  border-radius: var(--radius-80);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+}
+.calendarLight .headerBtn {
+  background: var(--color-ffffff);
+  box-shadow: var(--shadow-1);
+}
+.calendarDark .headerBtn {
+  background: var(--color-262629);
+  box-shadow: var(--shadow-1);
+  border: 0.5px solid var(--color-e5e5e5);
+}
+
+.monthYear {
+  width: 185px;
+  height: var(--space-44);
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+  justify-content: center;
+}
+
+.monthPill,
+.yearPill {
+  height: var(--space-44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-12);
+  gap: var(--space-8);
+  border-radius: var(--radius-6);
+  transition: box-shadow 0.2s ease;
+}
+.calendarLight .monthPill,
+.calendarLight .yearPill {
+  background: var(--color-ffffff);
+  box-shadow: var(--shadow-1);
+}
+.calendarDark .monthPill,
+.calendarDark .yearPill {
+  background: var(--color-262629);
+  box-shadow: var(--shadow-1);
+}
+
+.monthText,
+.yearText { /* text color/size adjusts by variant wrapper */ }
+
+.calendarLight .monthText,
+.calendarLight .yearText {
+  font-size: var(--typo-20-size);
+  font-weight: var(--typo-20-weight);
+  line-height: var(--typo-20-line);
+  letter-spacing: var(--typo-20-letter);
+  color: var(--typo-20-color);
+}
+.calendarDark .monthText,
+.calendarDark .yearText {
+  font-size: var(--typo-17-size);
+  font-weight: var(--typo-17-weight);
+  line-height: var(--typo-17-line);
+  letter-spacing: var(--typo-17-letter);
+  color: var(--typo-17-color);
+}
+
+.chev {
+  width: 8px;
+  height: 8px;
+  background: var(--color-0047ff);
+  border-radius: var(--radius-4);
+}
+
+.dowRow {
+  display: grid;
+  grid-template-columns: repeat(7, 54px);
+  grid-auto-rows: var(--space-44);
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: var(--space-378);
+  height: var(--space-44);
+  margin-top: var(--space-24);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dowCell {
+  border-radius: var(--radius-4);
+  display: grid;
+  place-items: center;
+}
+.calendarDark .dowCell .dowText {
+  font-size: var(--typo-18-size);
+  font-weight: var(--typo-18-weight);
+  line-height: var(--typo-18-line);
+  color: var(--typo-18-color);
+  opacity: 0.9;
+}
+.calendarLight .dowCell .dowText {
+  font-size: var(--typo-21-size);
+  font-weight: var(--typo-21-weight);
+  line-height: var(--typo-21-line);
+  color: var(--typo-21-color);
+}
+
+.weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--space-24);
+}
+
+.weekRow {
+  display: grid;
+  grid-template-columns: repeat(7, 54px);
+  grid-auto-rows: var(--space-44);
+  width: var(--space-378);
+  height: var(--space-44);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dayCell {
+  border-radius: var(--radius-4);
+  display: grid;
+  place-items: center;
+}
+
+.calendarLight .dayRegular {
+  background: var(--color-ffffff);
+  border: 0.5px solid var(--color-e5e5e5);
+  box-shadow: var(--shadow-1);
+}
+.calendarLight .dayDisabled {
+  background: var(--color-ffffff);
+  border: 1px solid var(--color-e6e6e6);
+  opacity: 1;
+}
+.calendarLight .dayToday {
+  background: var(--color-0047ff);
+  border: 2px solid var(--color-ffffff);
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-blue-1);
+}
+
+.calendarDark .dayRegular {
+  background: var(--color-262629);
+  border: 0.5px solid var(--color-e5e5e5);
+  box-shadow: var(--shadow-1);
+}
+.calendarDark .dayDisabled {
+  background: var(--color-ffffff);
+  opacity: 0.1;
+  border-radius: var(--radius-6);
+}
+.calendarDark .dayToday {
+  background: var(--color-0047ff);
+  border: 2px solid var(--color-ffffff);
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-blue-1);
+}
+
+.calendarLight .dayText {
+  font-size: var(--typo-21-size);
+  font-weight: var(--typo-21-weight);
+  line-height: var(--typo-21-line);
+  color: var(--typo-21-color);
+}
+.calendarLight .dayDisabled .dayText {
+  color: var(--color-001754);
+}
+.calendarLight .dayToday .dayText {
+  font-size: var(--typo-18-size);
+  font-weight: var(--typo-18-weight);
+  line-height: var(--typo-18-line);
+  color: var(--typo-18-color);
+}
+
+.calendarDark .dayText {
+  font-size: var(--typo-19-size);
+  font-weight: var(--typo-19-weight);
+  line-height: var(--typo-19-line);
+  color: var(--typo-19-color);
+}
+.calendarDark .dayDisabled .dayText {
+  font-size: var(--typo-18-size);
+  font-weight: var(--typo-18-weight);
+  line-height: var(--typo-18-line);
+  color: var(--typo-18-color);
+}
+.calendarDark .dayToday .dayText {
+  font-size: var(--typo-18-size);
+  font-weight: var(--typo-18-weight);
+  line-height: var(--typo-18-line);
+  color: var(--typo-18-color);
+}
+
+.iconLeft,
+.iconRight {
+  position: relative;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.iconLeft { border-right: 8px solid var(--color-ebebeb); }
+.iconRight { border-left: 8px solid var(--color-ebebeb); }
+.calendarLight .iconLeft { border-right-color: var(--color-000000); }
+.calendarLight .iconRight { border-left-color: var(--color-000000); }
+
+.headerBtn:focus,
+.monthPill:focus,
+.yearPill:focus,
+.dayCell:focus {
+  outline: 2px solid var(--color-0047ff);
+  outline-offset: 2px;
+}
+
+/* Visual cue when pill is 'open' (simulates dropdown focus from original JS) */
+.pillOpen {
+  box-shadow: 0 0 0 2px rgba(0,71,255,0.4);
+}
